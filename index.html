@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---------------------------- Favincon ---------------------------------------------->
+    <link rel="shortcut icon" href="image/logo-2.png" type="image/x-icon">
+<!----------------------------- Titile  ----------------------------------------------->
+    <title>Select your best 5 player</title>
+<!---------------------- Tailwind Linked Here ----------------------------------------->
+    <script src="https://cdn.tailwindcss.com"></script>
+<!--------------------- Custom Css linked here ----------------------------------- -->
+    <link rel="stylesheet" href="style.css">
+<!------------------------ Google Font  ------------------------------------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="bg-image flex justify-between items-center">
+                <div>
+                    <img class="w-80 mt-12" src="image/ozil (1).png" alt="">
+                </div>
+                <div class="text-center">
+                <h1 class="text-5xl font-bold text-white">Select Your Best <span class="text-8xl text-rose-500">5</span> Player</h1>
+                <p class="text-white text-xl mt-6">Are you looking for best internatnal top ranked football player's?<br> Here you can select your best five internatnal Football player for your best team. <br> Select your best matched player and win the trophy.
+                </p>
+                </div>
+                <div>
+                    <img class="w-80 mt-12" src="image/messi (1).png" alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="mt-12 mb-12 pr-20 pl-20">
+            <div class="flex justify-between ">
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-1.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="player-name text-2xl text-white font-bold mb-2">Lionel Messi</h1>
+                            <p class="text-slate-500 text-lg font-bold">36 Goals - 120 Assist</p>
+                            <button id="" class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-2.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="player-name text-2xl text-white font-bold mb-2">Neymar Jr</h1>
+                            <p class="text-slate-500 text-lg font-bold">27 Goals - 89 Assist</p>
+                            <button id="" class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-3.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="player-name text-2xl text-white font-bold mb-2">Kylian Mbappé</h1>
+                            <p class="text-slate-500 text-lg font-bold">31 Goals - 109 Assist</p>
+                            <button class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-4.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="player-name text-2xl text-white font-bold mb-2">Vítor Machado</h1>
+                            <p class="text-slate-500 text-lg font-bold">25 Goals - 76 Assist</p>
+                            <button class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-5.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="player-name text-2xl text-white font-bold mb-2">Sergio Ramos</h1>
+                            <p class="text-slate-500 text-lg font-bold">29 Goals - 102 Assist</p>
+                            <button class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900">
+                        <div>
+                            <img src="image/player-6.png" alt="">
+                        </div>
+                        <div class="flex flex-col text-center p-4 h-32">
+                            <h1 class="text-2xl text-white font-bold mb-2">Renato Sanches</h1>
+                            <p class="player-name text-slate-500 text-lg font-bold">34 Goals - 110 Assist</p>
+                            <button class="mt-3 bg-amber-500 px-12 py-2 text-slate-900 font-bold" type="submit" onclick="addPlayer(this)">Select</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-row-2 gap-8">
+                    <div class="bg-slate-900 text-white w-72 p-6">
+                        <div class="mb-8">
+                            <h1 class="text-center text-lg font-bold">Selected Player <span id="total-selected">0</span></h1>
+                        </div>
+                        <div>
+                            <ul id="player-list">
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 text-white w-72 p-6">
+                        <div class="mb-8">
+                            <h1 class="text-center text-lg font-bold">Budget</h1>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex flex-col">
+                                <div class="flex items-center justify-between">
+                                    <h2 class="mr-4">Per Player</h2>
+                                    <input id="player-budget-input" class="w-32 bg-slate-900 text-white border-solid border-2 border-white p-1 text-center" type="text" name="" id="">
+                                </div>
+                                <button id="calculate" class="mt-6 bg-white px-10 py-2 text-slate-900 font-bold " type="submit">Calculate</button>
+                            </div>
+                            <div class="mt-5">
+                                <h2 class="text-center">Player Expenses<span class="ml-4">$<span id="player-total-expense">00</span></span></h2>
+                            </div>
+                            <div class="flex justify-between items-center mt-5">
+                                <h2>Manager</h2>
+                                <input id="manager-input" class="w-32 bg-slate-900 text-white border-solid border-2 border-white p-1 text-center" type="text" name="" id="">
+                            </div>
+                            <div class="flex justify-between items-center mt-5">
+                                <h2>Coach</h2>
+                                <input id="coach-input" class="w-32 bg-slate-900 text-white border-solid border-2 border-white p-1 text-center" type="text" name="" id="">
+                            </div>
+                            <div class="flex justify-between items-canter mt-8">
+                                <h2>Total</h2>
+                                <h2>$<span id="total-text">00</span></h2>
+                            </div>
+                            <button id="total-calculate" class="mt-6 bg-white px-10 py-2 text-slate-900 font-bold " type="submit">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!------------------------ JavaScript File Linked  ------------------------------------------>
+    <script src="js/app.js"></script>
+</body>
+</html>
